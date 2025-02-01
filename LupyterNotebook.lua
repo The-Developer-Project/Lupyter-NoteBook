@@ -53,13 +53,15 @@ local function createNotebookUI()
 	textBox.ClearTextOnFocus = false
 	textBox.PlaceholderText = "Enter your code here..."
 	textBox.Text = ""
+	textBox.PlaceholderColor3 = Color3.fromHex("#646464")
+	textBox.TextSize = 15
 	textBox.Parent = inputFrame
 
 	-- Create the submit button
 	local submitButton = Instance.new("TextButton")
 	submitButton.Size = UDim2.new(0, 100, 0, 40)
 	submitButton.Position = UDim2.new(0.5, -50, 0, 5)  -- Adjusted position of the button to avoid overlap
-	submitButton.Text = "Submit"
+	submitButton.Text = "Execute"
 	submitButton.Parent = inputFrame
 
 	-- Make sure the ScrollingFrame has a UIListLayout
