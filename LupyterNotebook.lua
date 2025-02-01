@@ -205,14 +205,21 @@ local function createNotebookUI()
 		-- Ensure the ScrollingFrame scrolls to the bottom after new output is added
 		-- outputFrame.CanvasPosition = Vector2.new(0, newOutput.Position.Y.Offset)
 	end
-
-	-- Handle the submission of code
-	submitButton.MouseButton1Click:Connect(function()
+	
+	local function submit()
 		local userCode = textBox.Text:gsub("^local%s+", "")
 		textBox.Text = ""  -- Clear input after submitting
 
 		-- Execute the user code and display the result
 		executeCode(userCode)
+	end
+	-- Handle the submission of code
+	submitButton.MouseButton1Click:Connect(submit)
+	
+	textBox.FocusLost:Connect(function(e)
+		if e then
+			submit()
+		end
 	end)
 end
 
