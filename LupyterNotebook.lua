@@ -134,4 +134,4 @@ local function createNotebookUI()
 end
 
 -- When the plugin button is clicked, create the notebook UI
-button.Click:Connect(createNotebookUI)  -- Correct event here (.Click)
+button.Click:Connect(createNotebookUI)
