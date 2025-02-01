@@ -125,7 +125,7 @@ local function createNotebookUI()
 
 	-- Handle the submission of code
 	submitButton.MouseButton1Click:Connect(function()
-		local userCode = textBox.Text
+		local userCode = textBox.Text:gsub("^local%s+", "")
 		textBox.Text = ""  -- Clear input after submitting
 
 		-- Execute the user code and display the result
@@ -134,4 +134,4 @@ local function createNotebookUI()
 end
 
 -- When the plugin button is clicked, create the notebook UI
-button.Click:Connect(createNotebookUI)
+button.Click:Connect(createNotebookUI)  -- Correct event here (.Click)
