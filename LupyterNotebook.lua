@@ -76,14 +76,87 @@ local function createNotebookUI()
 		game = game,
 		script = script,
 		workspace = workspace,
-		-- Add more services as needed
-	} 
+
+		-- Standard Libraries
+		math = math,
+		string = string,
+		table = table,
+		coroutine = coroutine,
+		os = os,  -- Limited in Roblox
+		utf8 = utf8,
+		bit32 = bit32,
+		time = time,
+		warn = warn,
+		wait = wait,
+
+		-- Utility Functions
+		ipairs = ipairs,
+		pairs = pairs,
+		next = next,
+		select = select,
+		tonumber = tonumber,
+		tostring = tostring,
+		assert = assert,
+		error = error,
+		pcall = pcall,
+		xpcall = xpcall,
+		rawequal = rawequal,
+		rawget = rawget,
+		rawset = rawset,
+		setmetatable = setmetatable,
+		getmetatable = getmetatable,
+		loadstring = loadstring,
+		setfenv = setfenv,
+		getfenv = getfenv,
+
+		-- Roblox-Specific Functions
+		require = require,
+		tick = tick,
+		task = task,
+		settings = settings,
+		spawn = spawn,
+		shared = shared,
+		SharedTable = SharedTable,
+		SecurityCapabilities = SecurityCapabilities,
+		Secret = Secret,
+
+		-- Roblox Data Types
+		Axes = Axes,
+		BrickColor = BrickColor,
+		CFrame = CFrame,
+		Color3 = Color3,
+		ColorSequence = ColorSequence,
+		ColorSequenceKeypoint = ColorSequenceKeypoint,
+		DateTime = DateTime,
+		DockWidgetPluginGuiInfo = DockWidgetPluginGuiInfo,
+		Enum = Enum,
+		Faces = Faces,
+		Instance = Instance,
+		NumberRange = NumberRange,
+		NumberSequence = NumberSequence,
+		NumberSequenceKeypoint = NumberSequenceKeypoint,
+		PathWaypoint = PathWaypoint,
+		PhysicalProperties = PhysicalProperties,
+		Random = Random,
+		Ray = Ray,
+		Rect = Rect,
+		Region3 = Region3,
+		Region3int16 = Region3int16,
+		TweenInfo = TweenInfo,
+		UDim = UDim,
+		UDim2 = UDim2,
+		Vector2 = Vector2,
+		Vector2int16 = Vector2int16,
+		Vector3 = Vector3,
+		Vector3int16 = Vector3int16,
+	}
 	
 	env.print = function(...)
 		-- Capture printed output and store it in the output table
 		local outputText = table.concat({...}, " ")
 		table.insert(env.output, outputText)
 	end
+	
 	
 
 	-- Function to run user input code safely and display output
