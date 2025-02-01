@@ -23,7 +23,7 @@ Lupyter Notebook is a custom-built notebook plugin for Roblox Studio, designed t
 
 ## Community & Support
 Join our Discord community for support, updates, and feature discussions:
-[![Discord](https://img.shields.io/discord/FeXzssHXVW?label=Discord&logo=discord&color=5865F2)](https://discord.gg/FeXzssHXVW)
+[![Discord](https://img.shields.io/discord/FeXzssHXVW?label=Discord&logo=discord&color=5865F2)](https://discord.gg/QedwEVhrkX)
 
 ## Contribution
 We welcome contributions! Feel free to submit pull requests or report issues to help improve the project.
