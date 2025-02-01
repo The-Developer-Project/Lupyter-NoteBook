@@ -157,6 +157,14 @@ local function createNotebookUI()
 		table.insert(env.output, outputText)
 	end
 	
+	env.clear = function()
+		for i, v in pairs(outputFrame:GetDescendants()) do
+			if v:IsA("TextLabel") then
+				v:Destroy()
+			end
+		end
+	end
+	
 	
 
 	-- Function to run user input code safely and display output
